@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri Dec  4 21:55:38 2015 Arnaud Alies
-** Last update Fri Oct  7 12:01:57 2016 alies_a
+** Last update Fri Oct  7 14:00:44 2016 alies_a
 */
 
 #ifndef FIRE_H_
@@ -16,6 +16,10 @@
 #define FPS (50)
 
 #define OFF (32)
+
+#ifndef M_PI
+#define M_PI 3.1415
+#endif
 
 #define MAP(x, sA, eA, sB, eB) ((((sA - x) / (sA - eA)) * (eB - sB)) + sB)
 
