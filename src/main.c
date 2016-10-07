@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri Dec  4 21:54:40 2015 Arnaud Alies
-** Last update Fri Oct  7 12:01:28 2016 alies_a
+** Last update Fri Oct  7 13:47:20 2016 alies_a
 */
 
 #include <math.h>
@@ -66,8 +66,10 @@ int			main()
 {
   t_data		data;
 
-  data.win = bunny_start(WIDTH, HEIGHT, false, "Feu");
-  data.pix = bunny_new_pixelarray(WIDTH, HEIGHT);
+  if ((data.win = bunny_start(WIDTH, HEIGHT, false, "Feu")) == NULL)
+    return (1);
+  if ((data.pix = bunny_new_pixelarray(WIDTH, HEIGHT)) == NULL)
+    return (1);
   set_pal(data.pal);
   init_grid(&data);
   bunny_set_loop_main_function(loop);
