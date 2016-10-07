@@ -5,12 +5,12 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Sat Dec  5 18:52:12 2015 Arnaud Alies
-** Last update Sat Dec  5 19:27:35 2015 Arnaud Alies
+** Last update Fri Oct  7 12:01:05 2016 alies_a
 */
 
 #include "fire.h"
 
-void    do_stuff(t_data *data)
+void    live(t_data *data)
 {
   int   x;
   int   y;
@@ -20,7 +20,7 @@ void    do_stuff(t_data *data)
   while (y >= 0)
     {
       if ((data->grid)[y][x] < 127)
-	(data->grid)[y][x] = get_moy(data, x, y);
+	(data->grid)[y][x] = get_ave(data, x, y);
       x += 1;
       if (x > WIDTH)
 	{

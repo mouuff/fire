@@ -5,12 +5,12 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Sat Dec  5 18:53:18 2015 Arnaud Alies
-** Last update Sun Dec  6 16:53:03 2015 Arnaud Alies
+** Last update Fri Oct  7 12:00:14 2016 alies_a
 */
 
 #include "fire.h"
 
-int     get_moy(t_data *data, int x, int y)
+int     get_ave(t_data *data, int x, int y)
 {
   int   res;
 

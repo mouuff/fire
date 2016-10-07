@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri Dec  4 21:54:40 2015 Arnaud Alies
-** Last update Sun Dec  6 16:35:36 2015 Arnaud Alies
+** Last update Fri Oct  7 12:01:28 2016 alies_a
 */
 
 #include <math.h>
@@ -22,7 +22,7 @@ static t_bunny_response	loop(void *data_pt)
   zero.y = 1;
   data = (t_data*)data_pt;
   rand_start(data);
-  do_stuff(data);
+  live(data);
   mouse_to_grid(data);
   grid_to_pix(data);
   bunny_blit(&((data->win)->buffer), &((data->pix)->clipable), &zero);

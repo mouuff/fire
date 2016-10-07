@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Fri Dec  4 21:57:46 2015 Arnaud Alies
-## Last update Sun Dec  6 19:02:49 2015 Arnaud Alies
+## Last update Fri Oct  7 12:01:48 2016 alies_a
 ##
 
 NAME    =       fire
@@ -32,8 +32,8 @@ SRCS	=	$(SRC)main.c \
 		$(CORE)pal.c \
 		$(GRID)grid_init.c \
 		$(GRID)grid_pix.c \
-		$(GRID)do_stuff.c \
-		$(GRID)get_moy.c \
+		$(GRID)live.c \
+		$(GRID)get_ave.c \
 		$(GRID)mouse_to_grid.c \
 		$(GRID)rand_start.c
 

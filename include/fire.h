@@ -5,7 +5,7 @@
 ** Login   <alies_a@epitech.net>
 ** 
 ** Started on  Fri Dec  4 21:55:38 2015 Arnaud Alies
-** Last update Sun Dec  6 16:18:17 2015 Arnaud Alies
+** Last update Fri Oct  7 12:01:57 2016 alies_a
 */
 
 #ifndef FIRE_H_
@@ -42,8 +42,8 @@ void    tekpixel(t_bunny_pixelarray *pix,
 		 t_color *color);
 
 void	mouse_to_grid(t_data *data);
-void    do_stuff(t_data *data);
-int     get_moy(t_data *data, int x, int y);
+void    live(t_data *data);
+int     get_ave(t_data *data, int x, int y);
 void    rand_start(t_data *data);
 
 #endif
