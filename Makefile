@@ -5,7 +5,7 @@
 ## Login   <alies_a@epitech.net>
 ## 
 ## Started on  Fri Dec  4 21:57:46 2015 Arnaud Alies
-## Last update Fri Oct  7 12:01:48 2016 alies_a
+## Last update Tue Apr  4 19:22:24 2017 Morgan Simon
 ##
 
 NAME    =       fire
@@ -14,17 +14,18 @@ CC	=	gcc
 
 INC	=	./include/
 
-CFLAGS	=	-W -Wall -Werror -ansi -pedantic \
-		-I/home/${USER}/.froot/include \
-		-L/home/${USER}/.froot/lib \
-		-llapin -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system -lstdc++ -ldl -lm \
-		-I$(INC)
+CFLAGS	+=	-I/home/${USER}/.froot/include -I$(INC) -Wall -Werror
 
-SRC	=	./src/
+LDFLAGS	+=	-L/home/${USER}/.froot/lib		\
+		-llapin -lsfml-audio -lsfml-graphics	\
+		-lsfml-window -lsfml-system -lstdc++ 	\
+		-ldl -lm
 
-GRID	=	./src/grid/
+SRC	=	src/
 
-CORE	=	./src/core/
+GRID	=	src/grid/
+
+CORE	=	src/core/
 
 SRCS	=	$(SRC)main.c \
 		$(CORE)tekpixel.c \
@@ -44,7 +45,7 @@ RM	=	rm -f
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(OBJS) -o $(NAME) $(CFLAGS)
+		$(CC) -o $(NAME) $(OBJS) $(LDFLAGS)
 
 clean:
 		$(RM) $(OBJS)
@@ -53,3 +54,5 @@ fclean:		clean
 		$(RM) $(NAME)
 
 re:		fclean all
+
+.PHONY:		all clean fclean re
